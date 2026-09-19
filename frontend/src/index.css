@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0e1116;
+    color: #e2e8f0;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Alice Blue Custom Controls */
+.alice-checkbox {
+  appearance: none;
+  background-color: #1a1e26;
+  border: 1.5px solid #4b5568;
+  border-radius: 6px;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-grid;
+  place-content: center;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.alice-checkbox:hover {
+  border-color: #7dd3fc;
+  box-shadow: 0 0 10px rgba(186, 230, 253, 0.25);
+}
+
+.alice-checkbox:checked {
+  background-color: #F0F8FF;
+  border-color: #38bdf8;
+  box-shadow: 0 0 12px rgba(240, 248, 255, 0.5);
+}
+
+.alice-checkbox::before {
+  content: "";
+  width: 0.65rem;
+  height: 0.65rem;
+  clip-path: polygon(14% 44%, 0 60%, 45% 100%, 100% 18%, 80% 0%, 35% 65%);
+  transform: scale(0);
+  background-color: #0f172a;
+  transition: 120ms transform ease-in-out;
+}
+
+.alice-checkbox:checked::before {
+  transform: scale(1);
+}
+
+/* Alice Blue Radio */
+.alice-radio {
+  appearance: none;
+  background-color: #1a1e26;
+  border: 1.5px solid #4b5568;
+  border-radius: 9999px;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: inline-grid;
+  place-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.alice-radio:hover {
+  border-color: #7dd3fc;
+  box-shadow: 0 0 10px rgba(186, 230, 253, 0.25);
+}
+
+.alice-radio:checked {
+  background-color: #161a22;
+  border-color: #F0F8FF;
+  box-shadow: 0 0 12px rgba(240, 248, 255, 0.4);
+}
+
+.alice-radio::before {
+  content: "";
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  transform: scale(0);
+  background-color: #F0F8FF;
+  box-shadow: 0 0 8px rgba(240, 248, 255, 0.8);
+  transition: 120ms transform ease-in-out;
+}
+
+.alice-radio:checked::before {
+  transform: scale(1);
+}
+
+/* Glassmorphism & Card styling */
+.car-card {
+  background: linear-gradient(135deg, rgba(26, 30, 38, 0.85) 0%, rgba(18, 21, 27, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  transition: all 0.25s ease;
+}
+
+.car-card:hover {
+  border-color: rgba(240, 248, 255, 0.22);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5), 0 0 20px rgba(186, 230, 253, 0.06);
+}
+
+/* Automotive speed lines */
+.bg-grid-pattern {
+  background-image: radial-gradient(rgba(240, 248, 255, 0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
